@@ -179,6 +179,16 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.12 } },
 };
 
+const imageSlideInLeft = {
+  hidden: { opacity: 0, x: -280, scale: 0.96 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: { duration: 0.95, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
 function Reveal({ children, className = "", delay = 0 }) {
   return (
     <motion.div
@@ -324,16 +334,24 @@ function AboutSection() {
   ];
 
   return (
-    <section id="about" className="section-pad bg-brand-blush">
+    <section id="about" className="section-pad overflow-hidden bg-brand-blush">
       <div className="container-pad grid items-center gap-10 md:grid-cols-2">
-        <Reveal className="relative min-h-[390px]">
+        <motion.div
+          className="relative min-h-[390px]"
+          variants={imageSlideInLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <div className="orange-swoosh bottom-14 left-10 opacity-90" />
           <img
             src="/images/student-about.png"
             alt="Langlo student"
             className="relative z-10 mx-auto max-h-[440px] object-contain"
+            loading="lazy"
+            decoding="async"
           />
-        </Reveal>
+        </motion.div>
         <Reveal>
           <p className="max-w-[610px] text-[15px] leading-7 text-slate-700">
             <strong className="text-brand-navy">Langlo</strong> is a career-oriented language
@@ -474,16 +492,24 @@ function CoursesSection() {
 function LearningExperience() {
   const [active, setActive] = useState(0);
   return (
-    <section className="section-pad bg-brand-blush pt-0">
+    <section className="section-pad overflow-hidden bg-brand-blush pt-0">
       <div className="container-pad grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-        <Reveal className="relative min-h-[520px]">
+        <motion.div
+          className="relative min-h-[520px]"
+          variants={imageSlideInLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <div className="blue-swoosh left-4 top-4 opacity-95" />
           <img
             src="/images/student-learning.png"
             alt="Learning with Langlo"
             className="relative z-10 mx-auto mt-28 max-h-[390px] object-contain"
+            loading="lazy"
+            decoding="async"
           />
-        </Reveal>
+        </motion.div>
         <Reveal>
           <h2 className="max-w-[520px] text-3xl font-black leading-tight text-brand-navy md:text-4xl">
             Providing a
