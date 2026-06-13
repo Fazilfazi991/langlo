@@ -1,8 +1,8 @@
 export const eventsData = [
   {
-    title:
-      "Langlo Language Academy has officially signed a Memorandum of Understanding with Farook College (Autonomous), Kozhikode, one of Kerala's most respected academic institutions.",
+    title: "Farook College MoU",
     paragraphs: [
+      "Langlo Language Academy has officially signed a Memorandum of Understanding with Farook College (Autonomous), Kozhikode, one of Kerala's most respected academic institutions.",
       "The MoU was formalized in the presence of Mohammed Misbah, Managing Director, and Muhammed Swalih, Co-founder of Langlo, along with Dr. Aysha Swapna K.A., Principal of Farook College.",
       "This collaboration marks a significant step toward integrating strong academic foundations with practical language training.",
     ],
@@ -11,9 +11,9 @@ export const eventsData = [
     imagePosition: "right",
   },
   {
-    title:
-      "Langlo Language Academy has entered into a strategic collaboration with Vision School of Aviation, marking a new phase in specialized, industry-aligned language training.",
+    title: "Vision School of Aviation MoU",
     paragraphs: [
+      "Langlo Language Academy has entered into a strategic collaboration with Vision School of Aviation, marking a new phase in specialized, industry-aligned language training.",
       "This partnership focuses on equipping aviation professionals with communication skills aligned to global industry standards. By integrating language learning with real aviation scenarios, the collaboration ensures learners develop both linguistic competence and professional confidence.",
       "The MoU was formally handed over by the founders of Langlo Academy to Mr. Stanley Joseph, Centre Head, Vision School of Aviation, Ernakulam, during the official signing ceremony.",
     ],
