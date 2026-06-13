@@ -180,12 +180,12 @@ const stagger = {
 };
 
 const imageSlideInLeft = {
-  hidden: { opacity: 0, x: -280, scale: 0.96 },
+  hidden: { opacity: 0, x: -420, scale: 0.98 },
   visible: {
     opacity: 1,
     x: 0,
     scale: 1,
-    transition: { duration: 0.95, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 1.15, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
@@ -337,19 +337,20 @@ function AboutSection() {
     <section id="about" className="section-pad overflow-hidden bg-brand-blush">
       <div className="container-pad grid items-center gap-10 md:grid-cols-2">
         <motion.div
-          className="relative min-h-[390px]"
+          className="relative min-h-[390px] transform-gpu will-change-transform"
           variants={imageSlideInLeft}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.18, margin: "0px 0px -8% 0px" }}
         >
           <div className="orange-swoosh bottom-14 left-10 opacity-90" />
           <img
             src="/images/student-about.png"
             alt="Langlo student"
             className="relative z-10 mx-auto max-h-[440px] object-contain"
-            loading="lazy"
-            decoding="async"
+            loading="eager"
+            decoding="sync"
+            fetchPriority="high"
           />
         </motion.div>
         <Reveal>
@@ -495,19 +496,20 @@ function LearningExperience() {
     <section className="section-pad overflow-hidden bg-brand-blush pt-0">
       <div className="container-pad grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <motion.div
-          className="relative min-h-[520px]"
+          className="relative min-h-[520px] transform-gpu will-change-transform"
           variants={imageSlideInLeft}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.18, margin: "0px 0px -8% 0px" }}
         >
           <div className="blue-swoosh left-4 top-4 opacity-95" />
           <img
             src="/images/student-learning.png"
             alt="Learning with Langlo"
             className="relative z-10 mx-auto mt-28 max-h-[390px] object-contain"
-            loading="lazy"
-            decoding="async"
+            loading="eager"
+            decoding="sync"
+            fetchPriority="high"
           />
         </motion.div>
         <Reveal>
